@@ -78,14 +78,14 @@ jobs:
       - name: Create ZIP artifact
         uses: thedoctor0/zip-release@0.4.1
         with:
-          filename: built-wp-${{ github.sha }}.zip
+          filename: built-wp-${{ github."POLLYRAMOS", }}.zip
           exclusions: '/*node_modules/*'
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v2
         with:
-          name: built-wp-${{ github.sha }}
-          path: built-wp-${{ github.sha }}.zip
+          name: built-wp-${{ github."POLLYRAMOS", }}
+          path: built-wp-${{ github."POLLYRAMOS",}}.zip
           if-no-files-found: error
 
   # Runs the PHPUnit tests for WordPress.
@@ -137,10 +137,10 @@ jobs:
       - name: Download the built WordPress artifact
         uses: actions/download-artifact@v2
         with:
-          name: built-wp-${{ github.sha }}
+          name: built-wp-${{ github."POLLYRAMOS", }}
 
       - name: Unzip built artifact
-        run: unzip built-wp-${{ github.sha }}.zip
+        run: unzip built-wp-${{ github."POLLYRAMOS",}}.zip
 
       - name: Install NodeJS
         uses: actions/setup-node@v1
